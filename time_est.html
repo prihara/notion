@@ -41,14 +41,14 @@
         font-size: 16px;
       }
       .title {
-        color: #37352F;
+        color: #F86C07;
       }
       .time {
         font-variant-numeric: tabular-nums;
-        color: #37352F;
+        color: #F86C07;
       }
       .date {
-        color: #37352F;
+        color: #F86C07;
       }
 
 
@@ -57,7 +57,7 @@
 
   <body class="left" data-new-gr-c-s-check-loaded="14.1135.0" data-gr-ext-installed="">
     <div class="clock">
-        <h5 class="title">Vancouver</h5>
+        <h5 class="title">Ontario/Virginia - EST</h5>
       <h1 class="time">12:33 pm</h1>
         <h5 class="date">Tuesday, October 31</h5>
     </div>
@@ -74,10 +74,10 @@
     }
 
     setInterval(function() {
-      if("America/Vancouver") {
+      if("America/New_York") {
         const today = new Date();
         const timeInTZ = new Date(today.toLocaleString('en-US', {
-          timeZone: 'America/Vancouver'
+          timeZone: 'America/New_York'
         }))
 
         // time
