@@ -110,43 +110,4 @@
 
   
 </body>
-</html>") {
-        const today = new Date();
-        const timeInTZ = new Date(today.toLocaleString('en-US', {
-          timeZone: 'America/Vancouver'
-        }))
-
-        // time
-        let hours = timeInTZ.getHours();
-        const minutes = timeInTZ.getMinutes();
-        const seconds = timeInTZ.getSeconds();
-        let ampm = hours >= 12 ? 'pm' : 'am';
-        const hasampm = false;
-        if(hasampm) {
-          ampm = '';
-        }
-        hours = hasampm ? hours : hours % 12;
-        hours = hours ? hours : 12;
-
-        // date
-        const day = days[timeInTZ.getDay()];
-        const month = months[timeInTZ.getMonth()];
-        const dateNum = timeInTZ.getDate();
-
-
-        if (false) {
-          document.querySelector(".time").innerHTML = padLeft(hours)+":"+padLeft(minutes)+":"+padLeft(seconds)+" "+ampm;
-        } else {
-          document.querySelector(".time").innerHTML = padLeft(hours)+":"+padLeft(minutes)+" "+ampm;
-        }
-
-        if(true) {
-          document.querySelector(".date").innerHTML = day+", "+month+" "+padLeft(dateNum);
-        }
-      }
-    }, 1000)
-  </script>
-
-  
-</body>
 </html>
